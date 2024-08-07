@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Train Ticket Booking System</h1>
+    </header>
+    <main>
+        <section id="search-section">
+            <h2>Search Trains</h2>
+            <form id="search-form">
+                <label for="from">From:</label>
+                <input type="text" id="from" name="from" required>
+
+                <label for="to">To:</label>
+                <input type="text" id="to" name="to" required>
+
+                <label for="category">Booking Category:</label>
+                <select id="category" name="category" required>
+                    <option value="general">General</option>
+                    <option value="tatkal">Tatkal</option>
+                    <option value="premium-tatkal">Premium Tatkal</option>
+                </select>
+
+                <label for="date">Date of Journey:</label>
+                <input type="date" id="date" name="date" required>
+
+                <button type="submit">Search</button>
+            </form>
+            <div id="results"></div>
+        </section>
+
+        <section id="booking-section" style="display:none;">
+            <h2>Book Your Ticket</h2>
+            <form id="booking-form">
+                <label for="train-no">Train Number:</label>
+                <input type="text" id="train-no" name="train-no" readonly>
+
+                <label for="train-name">Train Name:</label>
+                <input type="text" id="train-name" name="train-name" readonly>
+
+                <label for="from-book">From:</label>
+                <input type="text" id="from-book" name="from-book" readonly>
+
+                <label for="to-book">To:</label>
+                <input type="text" id="to-book" name="to-book" readonly>
+
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <button type="submit">Book Now</button>
+            </form>
+            <div id="booking-result"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
